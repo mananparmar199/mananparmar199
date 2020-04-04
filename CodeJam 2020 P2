@@ -1,0 +1,25 @@
+t=(input())
+for m in range(1,t+1):
+    t1=int(input())
+    li=[]
+    for j in range(t1):
+        li.append(list(map(int,input().split())))
+    l=0
+    kk=[]
+    for i in range(len(li)):
+        kk.append(li[i][i])
+    l=sum(kk)
+    r=0
+    for k in range(len(li)):
+        t2=set(li[k])
+        if(len(t2)!=len(li[i])):
+            r+=1
+    c=0
+    for h in range(len(li[0])):
+        nli=[]
+        for hh in range(t1):
+            nli.append(li[hh][h])
+        ns=set(nli)
+        if(len(nli)!=len(ns)):
+            c+=1
+    print("Case #{}: {} {} {}".format(m,l,r,c))
